@@ -1,0 +1,119 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: lightgray;
+}
+
+/****header****/
+header {
+    height: 5rem;
+}
+
+.title-bar {
+    height: 50%;
+    /* outline: 2px solid blue; */
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.title-img {
+    height: 60%;
+    margin-left: 1rem;
+}
+
+
+.title {
+    font-size: 1rem;
+}
+
+
+.menu-bar {
+    display:flex;
+    gap: 1rem;
+    margin-left: 1rem;
+    height: 50%;
+    align-items: center;
+}
+
+.menu {
+    position: relative;
+}
+
+.menu:hover {
+    border: 1px solid rgb(7, 93, 133);
+    background-color: lightblue;
+}
+
+.menu-items {
+    background-color: lightgray;
+    position: absolute;
+    top: 1px;
+    width: 9rem;
+    display: none;
+    cursor: pointer;
+}
+
+
+/* sibling selector */
+/* .menu-btn:hover + .menu-items{
+    display: block;
+} */
+
+.menu:hover .menu-items {
+    display: block;
+}
+
+li {
+    padding: 0.25rem;
+}
+
+li:hover {
+    background-color: rgb(172, 172, 172);
+}
+/* .menu-items:hover {
+    background-color: gray;
+} */
+
+
+
+
+.videoInput {
+    display: none;
+}
+
+
+
+/* main */
+
+main {
+    background-color: black;
+    height: calc(100vh - 8rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video {
+    height: 100%;
+    /* width: 50%; */
+}
+
+.toast {
+    color: white;
+    font-size: 2rem;
+    position: fixed;
+    top: 100px;
+    right: 47px;
+    display: none;
+}
+
+/****footer****/
+
+footer {
+    height: 3rem;
+}
+
+
