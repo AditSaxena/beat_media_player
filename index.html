@@ -4,29 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BEAT MEDIA PLAYER</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://kit.fontawesome.com/06cb10335d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="title-bar">
-            <!-- <img src="./vlc-logo.png" alt="VLC Logo" class="title-img"> -->
-            <i class="fa-solid fa-video fa-beat-fade" style="color: maroon; margin-left: 1rem; margin-right: 0.5rem;"></i>
+        <div class="titlebar">
+            <i id="logo" class="fa-solid fa-film" style="color: #f5870a;"></i>
             <h1 class="title">BEAT Media Player</h1>
         </div>
         <div class="menu-bar">
+            <!-- open -->
             <div class="menu">
-                <div class="menu-btn" id="videobtn">Open</div>
+                <div class="menu-btn" id="videoBtn">Open</div>
                 <input type="file" class="videoInput" id="videoInput">
             </div>
+            <!-- speed -->
             <div class="menu">
                 <div class="menu-btn">Playback</div>
                 <ul class="menu-items">
-                    <li id="speedUp">Speed Up</li>
-                    <li id="speedDown">Speed Down</li>
+                    <li id="speedUp">SpeedUp</li>
+                    <li id="speedDown">SpeedDown</li>
                 </ul>
             </div>
+            <!-- volume -->
             <div class="menu">
                 <div class="menu-btn">Audio</div>
                 <ul class="menu-items">
@@ -37,11 +40,33 @@
         </div>
     </header>
     <main id="main"></main>
-    <div class="toast">100%</div>
+    <div class="toast"></div>
     <footer>
-        <i class="fa-solid fa-play fa-xl" style="margin-left: 0.5rem; margin-top: 1rem; "></i>
-        <i class="fa-solid fa-pause fa-xl" style="margin-left: 0.5rem; margin-top: 1rem; "></i>
-        <i class="fa-solid fa-expand fa-xl" style="margin-left: 96%;" id="fullScreen"></i>
+        <div class="time-container">
+            <div class="current-time" id="currentTime">--/--/--</div>
+            <div class="time-slider ">
+                <input type="range" value="0" min="0" class="slider" id="slider">
+            </div>
+            <div class="total-time" id="totalTime">--/--/--</div>
+        </div>
+        <div class="menu-btns">
+            <div class="play_pause-container btn" id="playPause">
+            </div>
+            <div class="rest-options">
+                <div class="back-btn btn" id="backBtn">
+                    <i class="fas fa-backward"></i>
+                </div>
+                <div class="placeholder btn" id="stopBtn">
+                    <i class="fas fa-stop"></i>
+                </div>
+                <div class="forward-btn btn" id="forwardBtn">
+                    <i class="fas fa-forward"></i>
+                </div>
+                <div class="fullscreen-btn btn" id="fullScreen">
+                    <i class="fas fa-expand"></i>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 <script src="script.js"></script>
